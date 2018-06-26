@@ -28,3 +28,4 @@
 
 /config/storage.yml
 /config/master.key
+.env
