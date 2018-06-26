@@ -19,4 +19,46 @@ module ApplicationHelper
   def copyright_generator
     EvoViewTool::Renderer.copyright "Eric Vo", "All rights reserved"
   end
+
+  def nav_items
+    [
+      {
+        url: root_path,
+        title: 'Home'
+      },
+      {
+        url: about_path,
+        title: 'About'
+      },
+      {
+        url: contact_path,
+        title: 'Contact'
+      },
+      {
+        url: blogs_path,
+        title: 'Blog'
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolio'
+      }
+    ]
+  end
+
+  def nav_helper style, html_tag
+    nav_links = ""
+    nav_items.each do |item|
+      nav_links << 
+        "<#{html_tag}>
+          <a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>
+            #{item[:title]}
+          </a>
+        </#{html_tag}>"
+    end
+    nav_links.html_safe
+  end
+
+  def active? path
+    "active" if current_page? path
+  end
 end
