@@ -6,9 +6,8 @@ class Portfolio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
-  def self.d3
-    where(subtitle: 'D3')
-  end
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
 
   def self.by_position
     order("position ASC")
