@@ -1,10 +1,18 @@
 <div class="container portfolio-container">
   <div class="row">
     <div class="col-md-12">
+      <% if logged_in?(:site_admin) %>
+        <span>
+          <%= link_to "Edit Item", 
+            edit_portfolio_path(@portfolio_item), 
+            class: "btn btn-warning" 
+          %>
+        </span>
+      <% end %>
       <%= link_to "View Portfolio", portfolios_path %>
     </div>
   </div>
-  <br>
+
   <div class="row">
     <div class="col-md-7">
       <%= image_tag portfolio_image(@portfolio_item.main_image, "main") %>
