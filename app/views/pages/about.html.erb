@@ -1,23 +1,28 @@
-<h1>About Me</h1>
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
 
-<hr>
+    <hr>
 
-<div class="row">
-  <div class="col-md-4">
-    <%= 
-      image_tag "profile.jpg",
-      width: 300, 
-      alt: "Eric V"
-    %>
-  </div>
+    <div class="row">
+      <div class="col-md-4">
+        <%= 
+          image_tag "profile.jpg",
+          width: "100%", 
+          alt: "Eric V",
+          class: "about-image"
+        %>
+      </div>
 
-  <div class="col-md-8">
-    <p>
-      Hi, I'm Eric! I am a web developer experienced with Ruby, Ruby on Rails,
-      Javascript, Node, Express, React, Redux, SQL, Vue, Python, HTML5, and CSS3.
-      I am currently looking for a job with a company where my skills and 
-      knowledge will allow me to be a major contributor to ongoing and 
-      future projects.
-    </p>
+      <div class="col-md-8">
+        <p class="about-text">
+          Hi, I'm Eric! I am a web developer experienced with Ruby, Ruby on Rails,
+          Javascript, Node, Express, React, Redux, SQL, Vue, Python, HTML5, and CSS3.
+          I am currently looking for a job with a company where my skills and 
+          knowledge will allow me to be a major contributor to ongoing and 
+          future projects.
+        </p>
+      </div>
+    </div>
   </div>
 </div>
